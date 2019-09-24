@@ -1,0 +1,27 @@
+{
+  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": ["react-app"], //**go here to better understand what rules are in use with "react-app" when editing rules and config**
+  //https://github.com/facebook/create-react-app/blob/master/packages/eslint-config-react-app/index.js
+  "rules": {
+    //edit rules here
+  },
+  "settings": {
+    "react": {
+      "version": "16.3"
+    }
+  }
+}

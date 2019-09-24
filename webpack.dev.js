@@ -10,8 +10,24 @@ module.exports = merge(common, {
         path: path.resolve(__dirname, "dist"),
 
     },
-//     plugins: [new HtmlWebpackPlugin({
-//         template: "./src/template.html"
-//     })
-// ],
+    plugins: [new HtmlWebpackPlugin({
+      template: "./src/template.html"
+      })
+    ],
+    module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+          },
+          {
+            test: /\.scss$/i,
+            use: [
+              "style-loader",
+              "css-loader",
+              "sass-loader"
+            ]
+          }
+        ],
+      }
 })
